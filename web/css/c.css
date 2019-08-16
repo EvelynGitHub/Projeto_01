@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/08/2019, 16:15:41
+    Author     : evelyn
+*/
+
+*{
+    
+    width: 99%;
+}
+
+header{
+    background-color: dodgerblue;
+    width: 100%;
+    display: flex;
+    /*position: absolute;*/
+}
+
+div {
+    font-family: sans-serif;
+    font-size: 50px;
+    font-style: oblique;
+    text-align: center;
+    padding: 10px; 
+    
+}
+.titulo{
+    width: 80%;
+}
+div a{
+    font-family: sans-serif;
+    font-size: 25px;
+    text-decoration-style: solid;   
+    text-align: left;
+    padding-top: 10px;
+    display: block;
+    width: 15%;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    background-color: dodgerblue;
+    font-size: 20px;
+    color: white;
+    margin: 15px;
+    padding-top: 10px;
+    
+}
+
+main{
+    display: flex;
+    float: center;
+    margin: 50px;
+    border: solid 1px black;
+    width: 90%;
+}
+
+h1{
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+table {
+    width: 500px;
+}
+
+td,th{
+    width: 170px;
+    text-align: center;
+}
+
+form{    
+    width: 50%;
+    display: inline-block;
+    float: center;
+}
+
+.f{
+    width: 99%;
+}
+
+.f p{
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.f input{
+    margin-top: 2px;
+    margin-bottom: 20px;
+    padding: 3px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-decoration-style: wavy;
+}
