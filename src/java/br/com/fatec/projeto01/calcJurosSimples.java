@@ -38,29 +38,27 @@ public class calcJurosSimples extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Juros Simples</title>");
-           out.println("<link href=\"css/c.css\" rel=\"stylesheet\" type=\"text/css\" />");            
+                      
             out.println("</head>");
             out.println("<body>");
             
-            out.println("<header>");
-            out.println("<div><a href='index.html'>Home</a></div> <div class='titulo'> ");
-            out.println("Programação Orientada a Objetos</div>");
-            out.println("</header>");
+             try{
+                double capital = Double.parseDouble(request.getParameter("capital"));
+                double taxa = Double.parseDouble(request.getParameter("taxa"));
+                int tempo = Integer.parseInt(request.getParameter("tempo"));
 
-            out.println("<h1>Resultado Juros Simples</h1>");
+                double taxaConvertida = (taxa/100);
+                double jurosSimples = capital * taxaConvertida * tempo;
+                double montante = ((capital * taxaConvertida * tempo) + capital);
 
-            try {
-                double c = Double.parseDouble(request.getParameter("capital"));
-                double i = Double.parseDouble(request.getParameter("juros"));
-                double t = Double.parseDouble(request.getParameter("tempo"));
-
-                out.println("<h3>Ao final de " + t + " mês/meses: </h3><br>");
-                out.println("<p>O juros cobrado será: R$" + (c * i * t) / 100 + "</p>");
-                out.println("<p>Seu total será: R$" + (((c * i * t) / 100) + c) + "</p>");
-
-            } catch (Exception ex) {
-                out.println("<h4>Desculpe, mas você precisa informar todas os valores para o calculo</h4>");
+                out.println("<h2>Resultado do cálculo do juros simples</h2>");
+                out.println("<h3>Juros: " + jurosSimples+"</h3>");
+                out.println("<h3>Montante: " + montante +"</h3>");
+            
+            }catch(Exception ex){
+                out.println("<h1>Erro ao calcular o juros </h1>");
             }
+            out.println("<h4><a href= 'index.html'>Home</a><h4>");
 
             out.println("</body>");
             out.println("</html>");

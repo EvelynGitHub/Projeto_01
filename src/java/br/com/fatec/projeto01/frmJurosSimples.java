@@ -39,29 +39,36 @@ public class frmJurosSimples extends HttpServlet {
             
             out.println("<head>");
             out.println("<title>Juros Simples</title>");            
-            out.println("<link href=\"css/c.css\" rel=\"stylesheet\" type=\"text/css\" />");            
+                      
             out.println("</head>");
             out.println("<body>");
             
-            out.println("<header>");
-            out.println("<div><a href='index.html'>Home</a></div> <div class='titulo'> ");
-            out.println("Programação Orientada a Objetos</div>");
-            out.println("</header>");
+              out.println("<h2>Informe os valores para calcular o juros simples:</h2>");
             
+            out.println("<form action='calc-juros-simples.html' method='POST'>");
             
-            out.println("<h1>Calcular Juros Simples</h1>");            
-            out.println("<h3>Informe os valores para o Calculo:</h3>");
+            out.println("Capital:");
+            out.println("<input type='text' name='capital'>");
             
-            out.println("<div class='f'>");            
+             out.println("<br>");
+             out.println("<br>");
             
-            out.println("<form action='calc-juros-simples.html' method='POST'>");            
-            out.println("<p>Capital Inicial:</p>\n" +
-"        <input type=\"number\" name=\"capital\" placeholder=\"Digite o valor do seu investimento\">\n" +
-"        <p>Taxa de Juros %:</p>\n" +
-"        <input type=\"number\" name=\"juros\" placeholder=\"Digite a taxa de juros ao mês\">\n" +
-"        <p>Tempo de investimento:</p>\n" +
-"        <input type=\"number\" name=\"tempo\" placeholder=\"Digite o tempo em meses\">" +
-"        <br><input type=\"submit\" value=\"Calcular\">");
+            out.println("Taxa:");
+            out.println("<input type='text' name='taxa'>" + "%");
+            
+             out.println("<br>");
+             out.println("<br>");
+            
+            out.println("Tempo:");
+            out.println("<input type='text' name='tempo'>"+"Mês/Meses");
+            
+             out.println("<br>");
+             out.println("<br>");
+            
+            out.println("<input type='submit'  value='Calcular'/>");
+               
+            out.println("<h4><a href= 'index.html'>Home</a><h4>");
+                       
             out.println("</form>");
             
             out.println("</div>");            
