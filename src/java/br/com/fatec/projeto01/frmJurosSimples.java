@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author evelyn
+ * @author Denis
  */
 @WebServlet(name = "frmJurosSimples", urlPatterns = {"/juros-simples.html"})
 public class frmJurosSimples extends HttpServlet {
@@ -71,7 +71,7 @@ public class frmJurosSimples extends HttpServlet {
                        
             out.println("</form>");
             
-            out.println("</div>");            
+                       
             out.println("</body>");
             out.println("</html>");
         }
